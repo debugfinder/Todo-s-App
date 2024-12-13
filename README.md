@@ -108,9 +108,9 @@ Testing ensures the reliability and correctness of the application. 🚀
 ## Support 📢
 For any issues or inquiries related to the ToDo App, please contact the developer at:
 
-**Email**: debugfinder@gmail.com
+**Email**: debugfinder@gmail.com <br><br>
 
-<p align="left"><a href="https://www.buymeacoffee.com/debugfinder"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="debugfinder" /></a></p>
+<p align="left"><a href="https://www.buymeacoffee.com/debugfinder"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="debugfinder" /></a></p><br> <br>
 
 ---
 
