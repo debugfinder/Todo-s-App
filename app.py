@@ -10,8 +10,8 @@ import pkg_resources
 app = Flask(__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'  # Set a secret key for session management
 
-client = MongoClient('mongodb+srv://palp18989:6x5jvsOedmulCqqC@cluster0.ikn0c7m.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
-db = client.dbsparta
+client = MongoClient('Mention Here Your MongoDB cluster Link')
+db = client.dbTodos
 todos = db.todos
 
 @app.route('/')
