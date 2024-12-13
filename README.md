@@ -107,7 +107,7 @@ Testing ensures the reliability and correctness of the application. 🚀
 ## Support 📢
 For any issues or inquiries related to the ToDo App, please contact the developer at:
 
-**Email**: palp18989@gmail.com
+**Email**: debugfinder@gmail.com
 
 ---
 
