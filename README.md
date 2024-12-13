@@ -110,6 +110,8 @@ For any issues or inquiries related to the ToDo App, please contact the develope
 
 **Email**: debugfinder@gmail.com
 
+<p align="left"><a href="https://www.buymeacoffee.com/debugfinder"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="debugfinder" /></a></p>
+
 ---
 
 ## Related Links 🔗
@@ -118,7 +120,3 @@ For any issues or inquiries related to the ToDo App, please contact the develope
 - **[Demo Video: Curious to see the app in action? Watch our Demo Video.](https://youtu.be/H9i3nVAtEmg)**
 - **[Project PPT: For an in-depth look, check out our Project PPT.](https://www.linkedin.com/posts/debugfinder_my-todo-s-app-sparta-coding-club-final-activity-7181275392735948800-NL7J?utm_source=share&utm_medium=member_android)**
 
----
-
-<h3 align="left">Support:</h3>
-<p align="left"><a href="https://www.buymeacoffee.com/debugfinder"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="debugfinder" /></a></p>
