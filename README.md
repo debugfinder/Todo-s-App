@@ -1,5 +1,5 @@
 # ToDo-s App 📅
-<img align="left" src="https://github.com/debugfinder/Todo-s-App/blob/main/mytodo-images/My-Todo-s-Homepage.png?raw=true"/>
+<img align="left" src="https://github.com/debugfinder/Todo-s-App/blob/main/mytodo-images/My-Todo-s-Homepage.png?raw=true"/><br>
 
 
 ## Introduction
