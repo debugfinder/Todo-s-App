@@ -1,10 +1,11 @@
 # My Todo-s App: A Productivity Tool for Task Management 📅
-<p align="left"><img align="left" src="https://github.com/debugfinder/Todo-s-App/blob/main/mytodo-images/My-Todo-s-Homepage.png?raw=true"/><br/>
-</p><br/>
-
+![ToDo App](https://via.placeholder.com/800x400.png?text=ToDo+s+App)
 
 ## Introduction
 The ToDo-s App is a simple web application built using Python and the Flask framework. It allows users to organize and manage their tasks efficiently. It provides features to add, delete, mark as complete, and filter tasks. Tasks are stored in a MongoDB database.
+
+<p align="left"><img align="left" src="https://github.com/debugfinder/Todo-s-App/blob/main/mytodo-images/My-Todo-s-Homepage.png?raw=true"/><br/>
+</p><br/>
 
 ## Objective of the ToDo-s App 🎯
 The primary objective of the ToDo-s App is to offer users a simple and intuitive platform for managing their tasks effectively, thereby enhancing productivity.
