@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ToDo App</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/flatly.min.css') }}" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" /> 
+	<style>
+		 
+	</style>
+</head>
+<body>
+<div>
+	<div class="container-fluid" id="wrapper">
+		<div class="row">
+			<div class="col-lg-4 col-lg-offset-4" id="content">
+				<div class="text-center head">
+					<h1><i class="fa fa-check-square-o"></i>My Todo-s</h1>
+					<h4>What do you plan to do today?<br><br></h4> 
+				</div>
+				<form action="{{ url_for('add_todo') }}" method="POST" role="form">
+					<div class=""> {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %} {{ message }} {% endfor %} {% endif %} {% endwith %}	
+					</div>
+					<div class="form-group">
+						<div class="input-group">
+							<input name="new-todo" type="text" class="form-control input-c" placeholder="Enter Your todo.." aria-label="Todo" aria-describedby="add-btn"> 
+							<span class="input-group-btn">
+								  <button type="submit" class="btn btn-default btn-c" id="add-btn"><b>ADD</b></button>
+							</span> 
+						</div>
+					</div>
+				</form>
+				<div class="row t10">
+					<div class="col-lg-12">
+						{% if has_todos %}
+						<div class="btn-toolbar">
+							<div class="btn-group"> <a href="{{ url_for('delete_completed') }}" class="btn btn-sm p-1 btn-c">
+										DELETE COMPLETED TODO's</a> 
+							</div>
+							<div class="btn-group"> <a href="{{ url_for('delete_all') }}" class="btn btn-sm p-1 btn-c">
+										DELETE ALL</a> 
+							</div>
+						</div>
+						{% endif %}
+					</div>
+				</div>
+<br>
+				<div class="list-group">
+					<a class="list-group-item btn-t-border" href="{{ url_for('menu') }}"><h5><i class="fa fa-bars text-center"></i> <b>APP MENU</b></h5><p class="small">Your essential guide for navigating <b>My Todo-s</b> App. Effortlessly handle tasks with many choices right at your fingertips.</p></a>
+				  </div>
+				
+				<ul class="list-group t20">
+					{% for todo in todos|reverse %}
+					<small class="text-c">
+						{% if todo.get('created_at') %}
+							{{ todo.created_at.strftime('%Y-%m-%d %H:%M:%S') }}
+						{% else %}
+							Date not available
+						{% endif %}
+						| Status: {% if todo.get('complete', False) %}Completed{% else %}Not Completed{% endif %}
+					</small>
+					<li class="list-group-item list-todo {% if todo.get('complete', False) %}todo-completed{% endif %}">
+						<div>
+							<span><b>{{ todo.get('text') }}</b></span>
+							<br><br>
+							<a href="{{ url_for('complete', oid=todo['_id']) }}" class="btn btn-sm {% if todo.get('complete', False) %}btn-success{% else %}btn-info{% endif %}">
+								{% if todo.get('complete', False) %}Completed{% else %}Not Completed{% endif %}
+							</a>
+							<!-- Add this line for the delete button -->
+							<a href="{{ url_for('delete_todo', oid=todo['_id']) }}" class="btn btn-sm btn-danger">Delete</a>
+						</div>
+					</li>
+					<br>
+					{% endfor %}
+				</ul>
+			    
+				
+					
+					
+					<hr class="hr hr-blurry" style="background-color: #034777; border-color:#034777" />
+				<div class="text-center"> Copyright &copy; 2024 <b>My Todo-s</b>.
+					<br> <small class="text-muted text-c">Developed by <a href="https://www.linkedin.com/in/debugfinder/"><b>Debugfinder</b></a></small> </div>
+			    </div>
+			</div>
+		</div>
+		<br>
+	<br>
+	</div>
+</div>
+
+
+</body>
+
+</html>

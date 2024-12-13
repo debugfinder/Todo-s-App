@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/flatly.min.css') }}" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" /> 
+    <style>
+  .basic-info{
+    margin-left: 20px;
+  }
+        
+       .clickcircle {
+  height: 80px;
+  width: 80px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.profile-card {
+  
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+  text-decoration: none;
+  background-color: aliceblue;
+  border-radius: 5px;
+  color: #034777;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.profile-card .caption, .profile-card {
+  padding-left: 15px;
+}
+
+html.wf-active .profile-card .basic-info-bio .basic-info-Name {
+  font-size: 16px;
+}
+.basic-info-Name{
+    font-weight: 600;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    
+}
+
+.profile-card .basic-info-bio {
+  color:;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  margin-top: 2px;
+}
+.profile-About{
+    
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  position: relative;
+  text-decoration: none;
+  background-color: aliceblue;
+  border-radius: 5px;
+  color: #034777;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.contact-info{  
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  position: relative;
+  text-decoration: none;
+  background-color: aliceblue;
+  border-radius: 5px;
+  color: #034777;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.linkedin{
+  color: #FFF; 
+  border-radius: 7px;
+  display: inline-block;
+  height: 50px;
+  width: 190px;
+  text-align: center;
+  font-size: 25px;
+  line-height: 50px;
+  vertical-align: middle;
+  background: #1da1f3;
+  overflow: hidden;
+  text-decoration:none;
+}
+
+.linkedin .fa-linkedin {
+    text-shadow: 2px 2px 0px #4287d6;
+    font-size: 25px;
+    color: #FFF;
+    text-decoration:none;
+}
+
+.linkedin span {
+  display:inline-block;
+  transition: .5s}
+
+.linkedin:hover span{/*HoverEffect*/
+  -webkit-transform: rotateX(360deg);
+  -ms-transform: rotateX(360deg);
+  transform: rotateX(360deg);
+  color:#FFF;
+  text-decoration:none;
+}
+
+.blockquote-custom {
+  position: relative;
+  font-size: 1.1rem;
+  background-color: #FFF;
+  border-radius: 10px;
+}
+
+.blockquote-custom-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -20px;
+  left: 40px;
+  font-size: 50px;
+  
+}
+.profile-quotes{
+ 
+  position: relative;
+  text-decoration: none;
+  border-radius: 5px;
+  color: #034777;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.quotes-p{
+    font-size: 18px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container-fluid" id="wrapper">
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-4" id="content">
+                <div class="text-center head">
+                    <h1><i class="fa fa-user"></i> Developer Profile</h1>
+                    <hr class="hr hr-blurry" style="background-color: #034777; border-color:#034777" />
+                </div>
+                
+                <div class="profile-card shadow-lg p-3 mb-5 bg-white rounded">
+
+                    <a class="" rel="noopener" target="_blank" href="https://www.linkedin.com/in/debugfinder/">
+                      <img class="fir-author-image clickcircle" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXGa60pwr2U-VMXzDmubmYCdVRkA_gcM29uVx9RIicY68tVmwp94Q7bgfiDrQxpVXcekEDL9LC9ihc5133muvq4r8VJCXnrsDP7ewTEdCJg346CpvUqulybXARkEyVxhhCPuuOa7h9r1g/s400/WhatsApp+Image+2020-08-27+at+6.00.15+PM+%25281%2529.jpeg" alt="Pradeep Pal - Developer">
+                      
+                    </a>
+                  
+                    <div class="basic-info">
+                      <h4 class="basic-info-Name">PRADEEP PAL <i class="fa fa-check-circle" aria-hidden="true" style="color: #187edd;"></i></h4>
+                      <h5 class="basic-info-bio" style="font-size: 16px;">Full Stack Developer & Web Designer<br>India Based &#8212; <b>Lvl 11</b></h5>
+                      <div class="basic-info-bio"></div>
+                    </div>
+                  </div>
+
+                  <div class="profile-About shadow-lg p-3 mb-5 bg-white rounded">
+                    <h2>About Me</h2>
+                    <p style="font-size: 18px;">I'm a passionate software developer with expertise in web development using Python, Flask, and JavaScript. My goal is to create innovative and user-friendly web applications that solve real-world problems.</p>
+                  </div>
+
+                  <div class="profile-quotes shadow-lg p-3 mb-5 bg-white rounded">
+                     <!-- CUSTOM BLOCKQUOTE -->
+                <blockquote class="blockquote blockquote-custom bg-white p-5 shadow rounded">
+                    <div class="blockquote-custom-icon shadow-sm"><i class="fa fa-quote-left text-white"></i></div>
+                    <br><br><br><p class="mb-0 mt-2 font-italic quotes-p">"Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it. <a href="https://www.linkedin.com/in/debugfinder/" class="text-info">@debugfinder</a>."</p>
+                    <footer class="blockquote-footer pt-4 mt-4 border-top">
+                        <cite title="Source Title" style="font-size: 15px;">Brian Kernighan</cite>
+                    </footer><br><br>
+                </blockquote><!-- END -->
+
+                  </div>  
+                    
+
+               
+         
+                  <div class="contact-info shadow-lg p-3 mb-5 bg-white rounded">
+                    <h2>Contact Information</h2><br>
+                    <div class="social-list">
+                        <a href="https://www.linkedin.com/in/debugfinder/" class="linkedin">
+                            <i class="fa fa-linkedin"></i> <span>Follow Me </span>
+                          </a>
+                    </div>
+                  </div>
+
+                
+                <hr class="hr hr-blurry" style="background-color: #034777; border-color:#034777" />
+                <div class="text-center"> Copyright &copy; 2024 <b>My Todo-s</b>.
+                    <br> <small class="text-muted text-c">Developed by <a href="https://www.linkedin.com/in/debugfinder/"><b>Debugfinder</b></a></small> </div>
+                </div>
+            </div><br>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Information</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/flatly.min.css') }}" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" /> 
+    <style>
+        .dropdown-item {
+    display: block;
+    width: 100%;
+    padding: .25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: .5rem 0;
+    margin: .125rem 0 0;
+    font-size: 2rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: .25rem;
+}
+
+    </style>
+</head>
+<body>
+    <div>
+        <div class="container-fluid" id="wrapper">
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-4" id="content">
+                    <div class="text-center head">
+                        <h1><i class="fa fa-check-square-o"></i>App Library Info</h1>
+                        <hr class="hr hr-blurry" style="background-color: #034777; border-color:#034777" />
+                    </div>
+                    <div class="list-group no-print">
+                        <a class="list-group-item btn-t-border" href="{{ url_for('menu') }}"><h5><i class="fa fa-bars text-center"></i> <b>APP MENU</b></h5><p class="small">Your essential guide for navigating <b>My Todo-s</b> App. Effortlessly handle tasks with many choices right at your fingertips.</p></a>
+                      </div>
+                    <div><p>The following libraries/packages are required to run this todo-s app along with their versions:</p>
+                        
+                    <div class="text-center">
+                        <table class="table table-hover table-responsive-sm text-center table-bordered table-striped">
+                            <div class="">
+                              <tr>
+                                    <td><b>Library</b></td>
+                                    <td><b>Version</b></td>
+                              </tr>
+                            </div>
+                            <div>
+                            {% for package, version in installed_packages.items() %}
+                            <tr>
+                                <td>{{ package }}</td>
+                                <td>{{ version }}</td>
+                            </tr>
+                            {% endfor %}
+                        </div>
+                        </table>
+                    </div>
+
+                  
+                    <div class="text-center">
+                        <div class="btn-group" role="group">
+                            <a href="{{ url_for('download_requirements') }}" class="btn btn-secondary btn-c"><i class="fa fa-download"></i> Download Requirements File</a>
+                           
+                        </div>
+                </div>
+                
+    <hr class="hr hr-blurry" style="background-color: #034777; border-color:#034777" />
+<div class="text-center"> Copyright &copy; 2024 <b>My Todo-s</b>.
+<br> <small class="text-muted text-c">Developed by <a href="https://www.linkedin.com/in/debugfinder/"><b>Debugfinder</b></a></small> </div>
+</div>        
+</div>
+            </div>
+            <br>
+            <br>
+            </div>
+            </div>
+          
+</body>
+</html>
+
+
+
+
+
+<!--
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Information</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="row justify-content-md-center">
+            <div class="col-lg-5 col-lg-offset-5">
+    <table class="table table-hover table-responsive-sm justify-content-md-center text-center table-bordered">
+        <h1  class="table-dark p-3 text-center">App Library Info<br></h1> 
+        <tr class="table-primary">
+            <th>Library</th>
+            <th>Version</th>
+        </tr>
+        {% for package, version in installed_packages.items() %}
+        <tr>
+            <td>{{ package }}</td>
+            <td>{{ version }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </div>
+</div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+-->

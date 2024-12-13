@@ -1,0 +1,72 @@
+body {
+	background: #003963;
+	font-family: "Roboto", sans-serif;
+	color: #003963;
+}
+
+.head{
+	color: #003963;
+}
+.input-c{
+	border: none;
+}
+
+.btn-c{
+	background: #003963;
+	border: none ;
+	color: azure;
+}
+
+.btn-c:hover{
+	background: #011829;
+	color: #FCD037;
+}
+
+.text-c{
+	color:#034777;
+}
+
+#wrapper {
+	margin-top: 5% !important;
+}
+#content {
+	background: #FCD037;
+	padding: 25px;
+	border-radius: 10px;
+}
+#content > h2 {
+	font-size: 18px;
+	text-align: center;
+	padding-top: 0;
+}
+.t10 {
+	margin-top: 10px;
+}
+.t20 {
+	margin-top: 20px;
+}
+.todo-completed {
+	text-decoration: line-through;
+	background: rgba(149, 165, 166, .3);
+	
+}
+
+.list-todo{
+	border: none;
+	border-radius: 5px;
+}
+
+.btn-group{
+	text-align: center;
+}
+.border{
+	border: 1px solid #011829;
+	border-radius: 10px;
+	padding: 20px 0px;
+}
+
+.btn-t-border{
+	border-top: solid #011829;
+	border-radius: 5px;
+}
+

@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/flatly.min.css') }}" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" /> 
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div>
+        <div class="container-fluid" id="wrapper">
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-4" id="content">
+                    <div class="text-center head">
+                        <h1><i class="fa fa-check-square-o"></i>App Menu</h1>
+                        <hr class="hr hr-blurry" style="background-color: #034777; border-color:#034777" />
+                    </div>
+                    <div class="list-group">
+                        <a class="list-group-item " href="{{ url_for('index') }}"><i class="fa fa-tasks text-center"></i> <b>Todo List</b> <br>Add, View and Manage your Todo list.</a>
+                        <a class="list-group-item " href="{{ url_for('completed') }}"><i class="fa fa-list text-center"></i> <b>Completed Todo List</b> <br> View all your Completed Todo list.</a>
+                        <a class="list-group-item " href="{{ url_for('not_completed') }}"><i class="fa fa-exclamation-circle text-center" ></i> <b>NotCompleted Todo List</b><br> View all your NotCompleted Todo list.</a>
+                        <a class="list-group-item" href="{{ url_for('filter_todo') }}"><i class="fa fa-filter text-center"></i> <b>Filter Todo List</b><br>View and Print Todo list according to your need.</a>
+                        <a class="list-group-item" href="{{ url_for('get_todos') }}"><i class="fa fa-cloud-download text-center"></i> <b>API Usage</b> <br> Access the /api/todos endpoint to receive a JSON representation of all todos.</a>
+                        <a class="list-group-item" href="{{ url_for('app_info') }}"><i class="fa fa-info-circle text-center"></i> <b>App Information</b> <br> Displays and Download information about installed packages used in the application.</a>
+                        <a class="list-group-item" href="{{ url_for('documentation') }}"><i class="fa fa-book text-center" ></i> <b>App Documentation</b><br> Easily access comprehensive guides and instructions. </a>
+                        <a class="list-group-item" href="{{ url_for('developer') }}"><i class="fa fa-user text-center"></i> <b>Developer Profile</b><br>Get to know the creator of "My Todo-s"</a>
+                      </div><hr class="hr hr-blurry" style="background-color: #034777; border-color:#034777"/>
+                <div class="text-center"> 
+                    Copyright &copy; 2024 <b>My Todo-s</b>.<br> <small class="text-muted text-c">Developed by <a href="https://www.linkedin.com/in/debugfinder/"><b>Debugfinder</b></a></small> </div>
+                </div>
+              </div> 
+            </div>
+        </div><br><br>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+

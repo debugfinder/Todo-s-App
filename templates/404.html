@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Information</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/flatly.min.css') }}" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" /> 
+</head>
+<body>
+    <div>
+        <div class="container-fluid" id="wrapper">
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-4" id="content">
+                    <div class="text-center head">
+                        <h1><i class="fa fa-check-square-o"></i>My Todo-s</h1>
+                        <hr class="hr hr-blurry" style="background-color: #034777; border-color:#034777" />
+                    </div>
+                    
+                    <div class="text-center">
+                        <h2 class="d-flex justify-content-center align-items-center gap-2 mb-4">
+                          <span class="display-1 fw-bold">4</span>
+                          <i class="fa fa-exclamation-circle text-danger display-4"></i>
+                          <span class="display-1 fw-bold bsb-flip-h">4</span>
+                        </h2>
+                        <h3 class="h2 mb-2">Oops! You're lost.</h3>
+                        <p class="mb-5">The page you are looking for was not found.</p>
+                        <a class="btn btn-secondary btn-c" href="{{ url_for('index') }}" role="button">Back to Home</a>
+                      </div>
+
+                   
+                    
+
+    <br><hr class="hr hr-blurry" style="background-color: #034777; border-color:#034777" />
+<div class="text-center"> Copyright &copy; 2024 <b>My Todo-s</b>.
+<br> <small class="text-muted text-c">Developed by <a href="https://www.linkedin.com/in/debugfinder/"><b>Debugfinder</b></a></small> </div>
+</div>        
+</div>
+            </div>
+            <br>
+            <br>
+            </div>
+            </div>
+</body>
+</html>
+

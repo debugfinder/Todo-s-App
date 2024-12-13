@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Todos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/flatly.min.css') }}" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" /> 
+    <style>
+        @media print {
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="container-fluid" id="wrapper">
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-4" id="content">
+                    <div class="text-center head">
+                        <h1><i class="fa fa-check-square-o"></i>Filtered Todos</h1>
+                        <hr class="hr hr-blurry" style="background-color: #034777; border-color:#034777" />
+                    </div>
+                    <div class="list-group no-print">
+                        <a class="list-group-item btn-t-border" href="{{ url_for('menu') }}"><h5><i class="fa fa-bars text-center"></i> <b>APP MENU</b></h5><p class="small">Your essential guide for navigating <b>My Todo-s</b> App. Effortlessly handle tasks with many choices right at your fingertips.</p></a>
+                      </div>
+    
+                    <!-- Form to submit filter options -->
+                    <form method="POST" action="/filter/todo" class="no-print">
+                        <label for="filter-date">Filter by Date:</label>
+                        <input class="form-control input-c" type="date" id="filter-date" name="filter-date"><br>
+                        
+                        <label for="filter-status">Filter by Status:</label>
+                        <select class="form-control input-c" id="filter-status" name="filter-status">
+                            <option value="">All</option>
+                            <option value="completed">Completed</option>
+                            <option value="not_completed">Not Completed</option>
+                        </select>
+                        <div class=""><br>
+                        <button class="btn btn-default btn-c" type="submit">Filter</button>
+                    </div>
+                    </form>
+                    
+                    <br><br>
+                    <div class="text-center">
+                        <h4>
+                        </h4>
+                    </div>
+                    <!-- Display filtered todos -->
+                    <div class="text-center border">
+                        {% set todo_list = todos|list %}
+                        {% if todo_list|length == 0 %}
+                            <p>Data for filtered todos is unavailable.</p>
+                        {% else %}
+                            {% for todo in todo_list %}
+                                <p>
+                                    <input class="input-c" type="checkbox" {% if todo.complete %}checked{% endif %} onclick="return false;">
+                                    {{ todo.text }}
+                                </p>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    <div class="text-center no-print">
+                        <!-- Print Button --><br>
+                        <button class="btn btn-default btn-c" onclick="window.print()">Print Filtered Todo-s</button>
+                    </div>
+                    
+                    
+                    <hr class="hr hr-blurry" style="background-color: #034777; border-color:#034777" />
+    <div class="text-center"> Copyright &copy; 2024 <b>My Todo-s</b>.
+    <br> <small class="text-muted text-c">Developed by <a href="https://www.linkedin.com/in/debugfinder/"><b>Debugfinder</b></a></small> </div>
+    </div>     
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+    </div>
+
+</body>
+</html>

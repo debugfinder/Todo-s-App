@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<div lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Documentation</title>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/flatly.min.css') }}" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" /> 
+		<style>
+            
+            
+    
+            .readmore:after {
+                content: "\2193";
+                margin-left: 8px;
+                font-size: .8em;
+            }
+    
+            .readmore.open:after {
+                content: "\2191";
+            }
+    
+            /* Hide overflow content by default */
+            .entry-content {
+                max-height: 235px; /* Show only 200px of content */
+                overflow: hidden;
+            }
+            p{
+                font-size: 18px;
+            }
+        </style>
+	</head>
+	<div class="container-fluid" id="wrapper">
+		<div class="row">
+			<div class="col-lg-4 col-lg-offset-4" id="content">
+				<div class="text-center head">
+					<h1><i class="fa fa-check-square-o"></i>Documentation</h1>
+					<hr class="hr hr-blurry" style="background-color: #034777; border-color:#034777" /> 
+                </div>
+                <div class="list-group">
+					<a class="list-group-item btn-t-border" href="{{ url_for('menu') }}"><h5><i class="fa fa-bars text-center"></i> <b>APP MENU</b></h5><p class="small">Your essential guide for navigating <b>My Todo-s</b> App. Effortlessly handle tasks with many choices right at your fingertips.</p></a>
+				  </div>
+				
+                <div id="content">
+                    <div class="entry-content">
+                        <div>
+                            <h2 style="font-size: 25px; font-weight: 600;">
+                                                                Introduction
+                                                              
+                                                            </h2> <p>The <strong>ToDo-s App</strong> is a simple web application built using Python and Flask framework. It allows users organize and manage their tasks efficiently. It provides features to add, delete, mark as complete, and filter tasks. Tasks are stored in a MongoDB database.</p> </div>
+                        <div>
+                            <h2 style="font-size: 25px; font-weight: 600;">
+                                                                Objective of the todo-s App
+                                                              
+                                                            </h2>
+                            <p>The primary objective of the <strong>ToDo-s App</strong> is to offer users a simple and intuitive platform for managing their tasks effectively, thereby enhancing productivity.</p>
+                        </div>
+                        <div>
+                            <h2 style="font-size: 25px; font-weight: 600;">
+                                                                Features 
+                                                            </h2>
+                            <p><strong>1. Add Todo:</strong> Allows users to add new tasks to their todo list.</p>
+                            <p><strong>2. Complete Todo:</strong> Users can mark tasks as completed.</p>
+                            <p><strong>3. Delete Todo:</strong> Users can delete individual tasks or clear their entire todo list.</p>
+                            <p><strong>4. Filter Todo:</strong> Provides options to filter todos based on completion status and creation date.</p>
+                            <p><strong>5. View Completed and Not Completed Todos:</strong> Separate endpoints are available to view completed and not completed todos.</p>
+                            <p><strong>6. API Access:</strong> Offers an API endpoint to retrieve todos in JSON format.</p>
+                            <p><strong>7. App Information:</strong> Displays information about installed packages used in the application.</p>
+                            <p><strong>8. Additional Information:</strong> The app offers links to app information, documentation, API usage, and developer profiles.</p>
+                        </div>
+                        <div>
+                            <h2 style="font-size: 25px; font-weight: 600;">
+                                                                Installation
+                                                            </h2>
+                            <p><strong>1.</strong> Clone or download the ToDo App source code from the repository.</p>
+                            <p><strong>2.</strong> Install the required Python packages listed in the <code>requirements.txt</code> file using <code>pip install -r requirements.txt</code>.</p>
+                            <p><strong>3.</strong> Run the Flask application by executing the <code>python app.py</code> file.</p>
+                        </div>
+                        <div>
+                            <h2 style="font-size: 25px; font-weight: 600;">
+                                                                Usage
+                                                            </h2>
+                            <p><strong>1.</strong> Access the ToDo App through a web browser by navigating to http://localhost:5000.</p>
+                            <p><strong>2.</strong> Use the provided interface to add, complete, and delete todos.</p>
+                            <p><strong>3.</strong> Navigate to different endpoints (e.g., /completed, /notcompleted) to view specific sets of todos.</p>
+                            <p><strong>4.</strong> Filter todos by status and creation date using the filter option.(/filter/todo)</p>
+                            <p><strong>5.</strong> Access the API endpoint at /api/todos to retrieve todos in JSON format.</p>
+                            <p><strong>6.</strong> Additional information about the app and the developer can be accessed through the provided links.</p>
+                        </div>
+                        <div>
+                            <h2 style="font-size: 25px; font-weight: 600;">
+                                                                Dependencies
+                                                            </h2>
+                            <p>The ToDo App relies on the following dependencies:</p>
+                            <p><strong>1. Flask:</strong> A Python web framework used for building the web application.</p>
+                            <p><strong>2. PyMongo:</strong> A MongoDB driver for Python used to interact with the database.</p>
+                            <p><strong>3. Datetime:</strong> A module in Python's standard library used for working with dates and times.</p>
+                            <p><strong>4. bson.objectid:</strong> Module providing ObjectId data type for MongoDB.</p>
+                            <p><strong>5. pkg_resources:</strong> Part of the setuptools package, used for querying information about installed packages.</p>
+                        </div>
+                        <div>
+                            <h2 style="font-size: 25px; font-weight: 600;">
+                                                                File Structure
+                                                            </h2>
+                            <p><strong>1. app.py:</strong> Contains the Flask application code.</p>
+                            <p><strong>2. index.html:</strong> HTML template for rendering the user interface.</p>
+                            <p><strong>3. static/:</strong> Contains static files such as CSS stylesheets.</p>
+                            <p><strong>4. templates/:</strong> Contains HTML templates.</p>
+                        </div>
+                        <div>
+                            <h2 style="font-size: 25px; font-weight: 600;">
+                                                                Testing Process
+                                                            </h2>
+                            <p>The testing process involves unit testing for individual functionalities and integration testing for the entire application. Testing ensures the reliability and correctness of the application.</p>
+                        </div>
+                        <div>
+                            <h2 style="font-size: 25px; font-weight: 600;">
+                                                                Tools/Platforms
+                                                            </h2>
+                            <p>The Todo-s App utilizes the following tools and platforms:</p>
+                            <p><strong>1. Flask:</strong> Python web framework</p>
+                            <p><strong>2. MongoDB:</strong> NoSQL database for data storage</p>
+                            <p><strong>3. HTML/CSS:</strong> Frontend development</p>
+                            <p><strong>4. JavaScript:</strong> Contains HTML templates.</p>
+                            <p><strong>5. Git:</strong> Version control system</p>
+                        </div>
+                        <div>
+                            <h2 style="font-size: 25px; font-weight: 600;">
+                                                                Future Scope of the Todo-s App
+                                                            </h2>
+                            <p>Future enhancements for the Todo-s App may include:</p>
+                            <p><b>1. </b>User authentication and authorization</p>
+                            <p><b>2. </b>Task prioritization and categorization</p>
+                            <p><b>3. </b>Reminders and notifications</p>
+                            <p><b>4. </b>Collaboration features for shared task management</p>
+                        </div>
+                        <div>
+                            <h2 style="font-size: 25px; font-weight: 600;">
+                                                                Limitations of the Todo-s App
+                                                            </h2>
+                            <p>Current limitations of the Todo-s App include:</p>
+                            <p><b>1. </b>Lack of user authentication</p>
+                            <p><b>2. </b>Basic filtering options</p>
+                            <p><b>3. </b>Limited customization features</p>
+                        </div>
+                        <div>
+                            <h2 style="font-size: 25px; font-weight: 600;">
+                                                                Bibliography
+                                                            </h2>
+                            <p><b>1. </b>Flask Documentation</p>
+                            <p><b>2. </b> MongoDB Documentation</p>
+                            <p><b>3. </b>Python Documentation</p>
+                        </div>
+                        <div>
+                            <h2 style="font-size: 25px; font-weight: 600;">
+                                                                Support:
+                                                            </h2>
+                            <p>For any issues or inquiries related to the ToDo App, please contact the developer at <a href="/"><b>palp18989@gmail.com</b></a>.</p>
+                        </div>
+                       
+                    </div>
+                    <button class="readmore btn btn-secondary btn-c">Read More</button>
+                </div>
+                
+				<hr class="hr hr-blurry" style="background-color: #034777; border-color:#034777" />
+				<div class="text-center"> Copyright &copy; 2024 <b>My Todo-s</b>.
+					<br> <small class="text-muted text-c">Developed by <a href="https://www.linkedin.com/in/debugfinder/"><b>Debugfinder</b></a></small> </div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Toggle visibility of entry-content when Read More button is clicked
+            $('.readmore').on('click', function() {
+                var $entryContent = $(this).prev('.entry-content');
+                $entryContent.toggleClass('open');
+                if ($entryContent.hasClass('open')) {
+                    $(this).text('Read Less');
+                    $entryContent.css('max-height', 'none');
+                } else {
+                    $(this).text('Read More');
+                    $entryContent.css('max-height', '235px'); // Adjust the height accordingly
+                }
+            });
+        });
+    </script>
+	
+	</body>
+
+	</html>
+	
